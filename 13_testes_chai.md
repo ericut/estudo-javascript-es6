@@ -6,7 +6,7 @@
 
 ### Instalação
 
-- Instalação da dependência chai
+- Instalação da dependência Chai
   `yarn add chai -D` ou `npm i chai --save-dev`
 
 - Rodar o teste no terminal
