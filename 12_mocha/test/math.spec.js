@@ -23,7 +23,7 @@ describe('Classe Math', function () {
     value = 5;
     // utilizando o método assert.equal para verificar se os dois valores serão iguais
     // neste caso passando valores na função sum, e o segundo parâmetro é o valor esperado
-    math.sum(5, 5, (value) => {
+    math.sum(value, 5, (value) => {
       assert.equal(value, 10);
       done();
     });

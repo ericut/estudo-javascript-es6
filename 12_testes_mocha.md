@@ -21,6 +21,8 @@ Mocha é uma ferramenta para executar testes **(Test Runner)**, retorna comporta
 - Rodar o teste no terminal
   `yarn test` ou `npm run test`
 
+### Desenvolvendo Testes com Mocha
+
 Código simples para entender como funciona o teste
 
 ```javascript
