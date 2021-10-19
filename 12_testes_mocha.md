@@ -37,7 +37,7 @@ describe('Classe Math', function () {
   });
 });
 
-// arqiovo math.js
+// arquivo math.js
 class Math {
   sum(a, b) {
     return a + b;

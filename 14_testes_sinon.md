@@ -32,11 +32,39 @@ describe('Classe Math', function () {
   });
 });
 
-// arqiovp math.js
+// arquivo math.js
 class Math {
   printSum(request, response, a, b) {
     response.load('index', a + b);
   }
 }
 module.exports = Math;
+```
+
+Customizando e retaurando valores de uma função já existente
+
+```javascript
+describe('Classe Math', function () {
+  it.only('Monitorar função existente', function () {
+    const req = {};
+    const res = {
+      load: function load() {
+        console.log('Função chamada!');
+      },
+    };
+    // monitorando algum método existente
+    sinon.spy(res, 'load'); // espiona
+
+    // ainda é possível customizar o retorno da função existente
+    sinon.stub(res, 'load').returns('anyreturn'); // modifica
+
+    const math = new Math();
+    math.printSum(req, res, 5, 5);
+
+    // a função inicial volta ao seu valor após receber o método .stub
+    res.retore(); // restaura
+
+    expect(res.load.args[0][1]).to.equal(10);
+  });
+});
 ```
